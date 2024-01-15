@@ -1,0 +1,41 @@
+@mixin hideScrollbar {
+
+  /* WebKit (Safari, Chrome) */
+  &::-webkit-scrollbar {
+    width: 0.1rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+
+  /* Microsoft Edge and Internet Explorer */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  /* Standard CSS properties (fallback for other browsers) */
+  overflow: auto;
+  -ms-overflow-style: none;
+  /* Hide scrollbar in IE */
+  scrollbar-width: none;
+  /* Hide scrollbar in Firefox */
+}
+
+@mixin pageTitle {
+  font-family: $main-font;
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin defaultHover {
+  &:hover {
+    background-color: rgba(99, 115, 129, 0.08)
+  }
+}

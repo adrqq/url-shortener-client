@@ -1,0 +1,14 @@
+@import '../../utils/mixins.module.scss';
+@import '../../utils/vars.module.scss';
+
+.go_back {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include defaultHover;
+
+  // &__icon {
+  // }
+}

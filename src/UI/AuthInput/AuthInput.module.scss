@@ -1,0 +1,96 @@
+@import '../../utils/mixins.module.scss';
+@import '../../utils/vars.module.scss';
+
+.auth_input {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: border 0.1s ease-in-out;
+  position: relative;
+  background-color: #ffffff;
+
+  &__hover {
+    &:hover {
+      border: 1px solid #000000;
+    }
+  }
+
+  &__legend {
+    color: #919eab;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 10px;
+    padding: 0 4px;
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    padding: 8px 10px 15px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    resize: none;
+
+    @include hideScrollbar;
+
+    &:disabled {
+      background-color: #fff;
+    }
+
+    &::placeholder {
+      color: #919eab;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 8px 10px 15px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+
+    &:disabled {
+      background-color: #fff;
+    }
+
+    &::placeholder {
+      color: #919eab;
+    }
+  }
+
+  &__error {
+    color: #ff0000;
+    opacity: 0.8;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 5px;
+    margin-top: 1px;
+    padding: 0 4px;
+  }
+}
+
+.auth_input_wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.pass_visibility_eye_wrapper {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.pass_visibility_eye {
+  &__ico {
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    opacity: 0.6;
+  }
+}

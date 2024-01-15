@@ -1,0 +1,10 @@
+@import './utils/vars.module.scss';
+
+* {
+  box-sizing: border-box;
+  font-family: $main-font;
+}
+
+button {
+  cursor: pointer;
+}

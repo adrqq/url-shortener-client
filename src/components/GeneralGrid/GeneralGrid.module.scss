@@ -1,0 +1,23 @@
+@import '../../utils/vars.module.scss';
+
+.grid {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  background: #F0F4FA;
+  grid-template-columns: $navbar-width calc($selector-block-size - ($navbar-width / 2)) calc($main-block-size - ($navbar-width / 2));
+}
+
+// grid-template-columns: $navbar-width calc($selector-block-size-module - ($navbar-width / 3)) calc($main-block-size-module - ($navbar-width / 3)) calc($module-block-size - ($navbar-width / 3));
+
+.grid__with_module {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  background: #F0F4FA;
+  grid-template-columns: $navbar-width calc($selector-block-size-module - ($navbar-width / 3)) calc($main-block-size-module - ($navbar-width / 3)) calc($module-block-size - ($navbar-width / 3));
+}

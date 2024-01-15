@@ -1,0 +1,129 @@
+@import "../../utils/vars.module.scss";
+@import "../../utils/mixins.module.scss";
+
+.sidebar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+  align-self: start;
+  align-items: center;
+  // width: 129px;
+  background: #f0f4fa;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: $default-light-blue;
+    margin-top: 24px;
+
+    &_icon {
+      width: 85%;
+      height: 85%;
+      opacity: 0.9;
+      flex-shrink: 0;
+      background: url("../../images/main-app-logo.svg") center / contain no-repeat;
+    }
+  }
+
+  &__functional {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background-color: #fff;
+
+    &__selected {
+      background: $default-light-blue;
+    }
+  }
+
+  &__switch {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 5px;
+
+    &__wrapper {
+      width: 48px;
+      height: 28px;
+      flex-shrink: 0;
+      border-radius: 20px;
+      background: $default-light-blue;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+
+  &__info__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    margin-bottom: 24px;
+  }
+
+  &__table {
+    background-size: 36px 36px;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    background-position: center;
+    background-image: url("../../images/table-logo-black.svg");
+
+    &__selected {
+      background-image: url("../../images/table-logo-white.svg");
+    }
+  }
+
+  &__about {
+    background-size: 36px 36px;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    background-position: center;
+    background-image: url("../../images/about-logo-black.svg");
+
+    &__selected {
+      background-image: url("../../images/about-logo-white.svg");
+    }
+  }
+}
+
+.black_line {
+  width: 100%;
+  height: 1px;
+  background: #c4c4c4;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 48px;
+}
+
+.links_modal_wrapper {
+  position: absolute;
+  z-index: 1;
+  left: 49px;
+  bottom: 1px;
+}
